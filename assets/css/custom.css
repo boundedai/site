@@ -1,0 +1,88 @@
+
+html,{
+    height: 100%;
+}
+
+
+body {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+}
+
+.customdiv {
+    width: 50%;
+    height: 100px;
+    /*background-color: red;*/
+    /*border:1px inset black;*/
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+/*.centerbox {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}*/
+
+.mybutton {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.testbutton {
+    color: ;
+    background-color: #bfbfbf;
+    border-col
+}
+
+.btn-tutorial {
+    color: #000000;
+    background-color: #bfbfbf;
+    border-color: #000000; /*set the color you want here*/
+}
+
+.btn-tutorial:hover, .btn-tutorial:focus, .btn-tutorial:active, .btn-tutorial.active, .open>.dropdown-toggle.btn-tutorial {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #000000; /*set the color you want here*/
+}
+
+.glossary-term {
+    color: #fc6203;
+}
+
+.inset-box {
+    /*background-color: #cfcfcf;*/
+    background-color: #dbdbdb;
+}
+
+.button-wrapper .btn {
+    margin-bottom:5px;
+}

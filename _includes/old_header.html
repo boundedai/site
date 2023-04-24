@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="{{ "/assets/css/syntax.css" | relative_url}}" rel="stylesheet" >
+  <link href="{{ "/assets/css/tutorials.css" | relative_url}}" rel="stylesheet" >
+  <link rel="shortcut icon" href="{{ "/assets/img/ST_logo_transparent.png" | relative_url}}" type="image/x-icon">
+  {% seo %}
+  
+  <!-- Mathjax -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: { equationNumbers: { autoNumber: "all" } }
+    });
+</script>
+<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+
+<body{% if page.id %} id="{{ page.id }}"{% endif %} class="{{ page.layout }}">
+
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0014A8;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ "/" | relative_url}}">Seldonian ML</a>
+            <a class="navbar-brand" href="https://github.com/seldonian-toolkit"><i class="fa fa-github"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ "/overview/" | relative_url}}">Overview</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tutorials
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ "/tutorials/" | relative_url}}">Getting started</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ "/tutorials/alg_details_tutorial/" | relative_url }}">(A) Seldonian algorithm details</a></li>
+                            <li><a class="dropdown-item" href="{{ "/tutorials/install_toolkit_tutorial/" | relative_url }}">(B) Installing the Seldonian Toolkit</a></li>
+                            <li><a class="dropdown-item" href="{{ "/tutorials/simple_engine_tutorial/" | relative_url }}">(C) Getting started with the Seldonian Engine</a></li>
+                            <li><a class="dropdown-item" href="{{ "/tutorials/fair_loans_tutorial/" | relative_url }}">(D) Fairness for automated loan approval systems</a></li>
+                            
+                            <li><a class="dropdown-item" href="{{ "/tutorials/science_GPA_tutorial/" | relative_url }}">(E) Predicting student GPAs from application materials with fairness guarantees</a></li>
+
+                            <li><a class="dropdown-item" href="{{ "/tutorials/new_supervised_model/" | relative_url }}">(F) Creating a new Seldonian supervised learning model</a></li>
+                            
+                            <li><a class="dropdown-item" href="{{ "/tutorials/pytorch_mnist/" | relative_url }}">(G) Creating your first Seldonian PyTorch model</a></li>
+
+                            <li><a class="dropdown-item" href="{{ "/tutorials/gridworld_RL_tutorial/" | relative_url }}">(H) Introduction to reinforcement learning with the Seldonian Toolkit</a></li>
+                            
+                            <li><a class="dropdown-item" href="{{ "/tutorials/custom_base_variable_tutorial/" | relative_url }}">(I) Creating custom base variables in behavioral constraints</a></li>
+
+                            <li><a class="dropdown-item" href="{{ "/tutorials/efficient_deep_networks/" | relative_url}}"> (J) Efficiently training deep Seldonian networks</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Examples
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ "/examples/" | relative_url}}">Example use cases</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            
+                            <li><a class="dropdown-item" href="{{ "/examples/facial_recognition/" | relative_url }}">Gender bias in facial recognition (computer vision)</a></li>
+                            
+                            <li><a class="dropdown-item" href="{{ "/examples/lie_detection/" | relative_url }}">Fairness for lie detection (NLP)</a></li>
+
+                            <li><a class="dropdown-item" href="{{ "/tutorials/fair_loans_tutorial/" | relative_url }}">Fairness for Automated Loan Approval Systems (tabular)</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Documentation
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ "/overview/" | relative_url}}">Overview</a></li>
+                            
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://seldonian-toolkit.github.io/Engine/build/html/index.html">Engine</a></li>
+                            <li><a class="dropdown-item" href="https://seldonian-toolkit.github.io/Experiments/build/html/index.html">Experiments</a></li>
+                            <li><a class="dropdown-item" href="https://seldonian-toolkit.github.io/GUI/build/html/index.html">GUI</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Versions
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ "/v_alpha/" | relative_url}}">Version alpha</a></li>
+                            <li><a class="dropdown-item" href="{{ "/coming_soon/" | relative_url}}">Coming soon</a></li>
+                            <li><a class="dropdown-item" href="{{ "/changelog/" | relative_url}}">Change log</a></li>
+                        </ul>
+                    </li>
+                    
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ "/contest/" | relative_url}}">Competition</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ "/glossary/" | relative_url}}">Glossary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ "/faq/" | relative_url}}">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ "/support/" | relative_url}}">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ "/license/" | relative_url}}">License</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ "/about/" | relative_url}}">Team</a></li>
+                            <li><a class="dropdown-item" href="{{ "/cite_us/" | relative_url}}">Citing our work</a></li>
+                        </ul>
+                    </li>
+        </div>
+    </nav>
+    <!-- .full-width here gets closed on support-page.html and home.html layouts -->
